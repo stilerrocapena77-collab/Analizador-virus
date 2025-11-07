@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Analizador de virus - Proyecto</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        code {
+            background: #333;
+            padding: 10px;
+            display: block;
+            text-align: left;
+            white-space: pre-wrap;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🔍 Analizador de Virus en Python</h1>
+    <p>Aquí podrás ver el código y pasos para analizar si una aplicación tiene virus.</p>
+
+    <h2>📌 Código en Python:</h2>
+    <code>
+    import os
+    import hashlib
+
+    def scan_file(file_path):
+        with open(file_path, "rb") as f:
+            file_hash = hashlib.md5(f.read()).hexdigest()
+        print(f"Hash del archivo: {file_hash}")
+
+    ruta = "archivo.apk"
+    if os.path.exists(ruta):
+        scan_file(ruta)
+    else:
+        print("Archivo no encontrado")
+    </code>
+
+    <p>✅ Más instrucciones serán añadidas pronto...</p>
+</body>
+</html>
